@@ -37,7 +37,7 @@ const Chat = () => {
     return () => {
       socketRef.current.disconnect();
     };
-  }, [isJoined, username, room]);
+  }, [isJoined, username]);
 
   // Handle username form submit
   const handleJoin = (e) => {
