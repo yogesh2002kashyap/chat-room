@@ -39,7 +39,7 @@ io.on('connection', (socket) => {
   // Receive message and broadcast to ALL with username
   socket.on('send-message', ({text}) => {
 
-    socket.to(socket.room).emit('receive-message', {
+    io.to(socket.room).emit('receive-message', {
       text,
       username: socket.username,
       timestamp: new Date().toLocaleTimeString(),
